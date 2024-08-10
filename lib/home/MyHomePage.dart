@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_food_delivery_app/home/food_page_body.dart';
 import 'package:flutter_food_delivery_app/widgets/bigText.dart';
 import 'package:flutter_food_delivery_app/widgets/small_text.dart';
 
@@ -24,8 +25,9 @@ class _MyhomepageState extends State<Myhomepage> {
                 children: [
                   Column(
                     children: [
-                      Bigtext(text: "America",color: Colors.grey,),
+                      Bigtext(text: "Pakistan",color: Colors.grey,),
                       Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           small_text(text: "Mumbai",color: Colors.black54,),
                           Icon(Icons.arrow_drop_down)
@@ -51,6 +53,7 @@ class _MyhomepageState extends State<Myhomepage> {
                 ],
               ),
             ),
+            FoodPageBody(),
           ],
         ),
       ),
