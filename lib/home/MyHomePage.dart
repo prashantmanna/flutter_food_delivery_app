@@ -17,6 +17,7 @@ class _MyhomepageState extends State<Myhomepage> {
       body: Container(
         child: Column(
           children: [
+            //header
             Container(
               margin: EdgeInsets.only(top: 45,bottom: 15),
               padding: EdgeInsets.only(left: 20,right: 20),
@@ -53,6 +54,7 @@ class _MyhomepageState extends State<Myhomepage> {
                 ],
               ),
             ),
+            //body
             FoodPageBody(),
           ],
         ),
