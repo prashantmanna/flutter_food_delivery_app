@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_food_delivery_app/widgets/bigText.dart';
+import 'package:flutter_food_delivery_app/widgets/small_text.dart';
 
 class Myhomepage extends StatefulWidget {
   const Myhomepage({super.key});
@@ -24,7 +25,12 @@ class _MyhomepageState extends State<Myhomepage> {
                   Column(
                     children: [
                       Bigtext(text: "America",color: Colors.grey,),
-                      Text("City")
+                      Row(
+                        children: [
+                          small_text(text: "Mumbai",color: Colors.black54,),
+                          Icon(Icons.arrow_drop_down)
+                        ],
+                      )
                     ],
                   ),
                   Center(
