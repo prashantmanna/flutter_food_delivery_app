@@ -18,8 +18,8 @@ class Bigtext extends StatelessWidget {
       maxLines: 1,
       style: TextStyle(
         color: color,
-        fontWeight: FontWeight.w400,
-        fontFamily:"Poppins",
+        fontWeight: FontWeight.w500,
+        fontFamily:"Roboto",
         fontSize:size==0?Dimension.font20:size
       ),
     );

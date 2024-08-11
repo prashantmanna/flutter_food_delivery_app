@@ -1,4 +1,3 @@
-
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_food_delivery_app/utils/Dimension.dart';
@@ -14,7 +13,6 @@ class FoodPageBody extends StatefulWidget {
 }
 
 class _FoodPageBodyState extends State<FoodPageBody> {
-  
   PageController pageController = PageController(viewportFraction: 0.85);
   var _currPageValue = 0.0;
   var scaleFactor = 0.8;
@@ -38,8 +36,9 @@ class _FoodPageBodyState extends State<FoodPageBody> {
 
   @override
   Widget build(BuildContext context) {
-    print("current height is "+MediaQuery.of(context).size.height.toString());
+    print("current height is " + MediaQuery.of(context).size.height.toString());
     return Column(children: [
+      //slider section
       Container(
         // color: Colors.red,
         height: Dimension.pageView,
@@ -60,6 +59,58 @@ class _FoodPageBodyState extends State<FoodPageBody> {
           activeShape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.0)),
         ),
+      ),
+      //popular text
+      SizedBox(height: Dimension.height30,),
+      Container(
+        margin: EdgeInsets.only(left: Dimension.width30),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.end,
+          children: [
+            Bigtext(text: "Popular"),
+            SizedBox(width: Dimension.width10,),
+            Container(
+              margin: EdgeInsets.only(bottom: 3),
+              child: Bigtext(text: ".",color: Colors.black,),
+            ),
+            SizedBox(width: Dimension.width10,),
+            Container(
+              margin: EdgeInsets.only(bottom: 3),
+              child: small_text(text: "Food Pairing",),
+            )
+          ],
+        ),
+      ),
+      Container(
+        height: 700,
+        child: ListView.builder(
+            itemCount: 10,
+            itemBuilder: (context,index){
+              return Container(
+                margin: EdgeInsets.only(left: Dimension.width20,right: Dimension.width20),
+                child: Row(
+                  children: [
+                    Container(
+                      width:120,
+                      height: 120,
+                      margin: EdgeInsets.all(Dimension.width10),
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(Dimension.radius20),
+                          color: Colors.white38,
+                          image: DecorationImage(
+                            fit: BoxFit.fill,
+                              image: AssetImage(
+                                  "assets/images/vadapav.png"
+                              )
+                          )
+                      ),
+
+
+                    )
+                  ],
+                ),
+              );
+            }),
       )
     ]);
   }
@@ -95,7 +146,8 @@ class _FoodPageBodyState extends State<FoodPageBody> {
         children: [
           Container(
             height: Dimension.pageViewContainer,
-            margin: EdgeInsets.only(left: Dimension.width10, right: Dimension.width10),
+            margin: EdgeInsets.only(
+                left: Dimension.width10, right: Dimension.width10),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(Dimension.radius30),
                 color: index.isEven ? Color(0xff69c5df) : Color(0xff9294cc),
@@ -108,11 +160,14 @@ class _FoodPageBodyState extends State<FoodPageBody> {
             child: Container(
               height: Dimension.pageViewTextContainer,
               child: Container(
-                padding: EdgeInsets.only(top: Dimension.height10, left: 15, right: 15),
+                padding: EdgeInsets.only(
+                    top: Dimension.height10, left: 15, right: 15),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Bigtext(text: "Masala Dosa",),
+                    Bigtext(
+                      text: "Masala Dosa",
+                    ),
                     SizedBox(
                       height: Dimension.height10,
                     ),
@@ -167,7 +222,10 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                   ],
                 ),
               ),
-              margin: EdgeInsets.only(left: Dimension.width30, right: Dimension.width30, bottom: Dimension.height30),
+              margin: EdgeInsets.only(
+                  left: Dimension.width30,
+                  right: Dimension.width30,
+                  bottom: Dimension.height30),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(Dimension.radius20),
                   color: Colors.white,
