@@ -57,7 +57,9 @@ class _MyhomepageState extends State<Myhomepage> {
               ),
             ),
             //body
-            FoodPageBody(),
+            Expanded(child: SingleChildScrollView(
+              child: FoodPageBody(),
+            )),
           ],
         ),
       ),
