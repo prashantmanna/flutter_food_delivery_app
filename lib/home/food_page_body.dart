@@ -37,6 +37,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
   @override
   Widget build(BuildContext context) {
     print("current height is " + MediaQuery.of(context).size.height.toString());
+    print("current width " + MediaQuery.of(context).size.width.toString());
     return Column(children: [
       //slider section
       Container(
@@ -81,26 +82,24 @@ class _FoodPageBodyState extends State<FoodPageBody> {
           ],
         ),
       ),
-      Container(
-        height: 700,
-        child: ListView.builder(
+    ListView.builder(
             itemCount: 10,
             shrinkWrap: true,
             physics: NeverScrollableScrollPhysics(),
             itemBuilder: (context,index){
               return Container(
-                margin: EdgeInsets.only(left: Dimension.width20,right: Dimension.width20),
+                margin: EdgeInsets.only(left: Dimension.width20,right: Dimension.width20,bottom: Dimension.height10),
                 child: Row(
                   children: [
+                    //images section
                     Container(
-                      width:120,
-                      height: 120,
-                      margin: EdgeInsets.all(Dimension.width10),
+                      width:Dimension.listViewImageSize,
+                      height: Dimension.listViewImageSize,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(Dimension.radius20),
                           color: Colors.white38,
                           image: DecorationImage(
-                            fit: BoxFit.fill,
+                            fit: BoxFit.cover,
                               image: AssetImage(
                                   "assets/images/vadapav.png"
                               )
@@ -108,12 +107,56 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                       ),
 
 
+                    ),
+                    Expanded(
+                      child: Container(
+                        height: Dimension.listViewTextSize,
+
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.only(topRight: Radius.circular(Dimension.radius20),bottomRight: Radius.circular(Dimension.radius20)),
+                          color: Colors.white,
+                        ),
+                        child: Padding(
+                          padding: EdgeInsets.only(left: Dimension.width10,right: Dimension.width10),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Bigtext(text: "Famous Vadapav of mumbai"),
+                              SizedBox(height: Dimension.height10,),
+                              small_text(text: "With Green Chutney"),
+                              SizedBox(height: Dimension.height10,),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  IconAndText(
+                                      icon: Icons.circle,
+                                      text: "Normal",
+                                      color: Colors.grey,
+                                      iconColor: Colors.yellow),
+                                  IconAndText(
+                                      icon: Icons.location_on,
+                                      text: "1.7km",
+                                      color: Colors.grey,
+                                      iconColor: Colors.blue),
+                                  IconAndText(
+                                      icon: Icons.access_time_rounded,
+                                      text: "32 min",
+                                      color: Colors.grey,
+                                      iconColor: Colors.grey),
+                                ],
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+
                     )
                   ],
                 ),
               );
             }),
-      )
+
     ]);
   }
 

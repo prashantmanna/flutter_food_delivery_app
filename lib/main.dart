@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_food_delivery_app/screens/popular_food.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
 import 'home/MyHomePage.dart';
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
 
         useMaterial3: true,
       ),
-      home: const Myhomepage(),
+      home: const popular_food(),
     );
   }
 }
