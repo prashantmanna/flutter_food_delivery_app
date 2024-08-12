@@ -57,8 +57,12 @@ class popular_food extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    AppColumn(text: "Dum Paneer Biryani",),
-                    SizedBox(height: Dimension.height20,),
+                    AppColumn(
+                      text: "Dum Paneer Biryani",
+                    ),
+                    SizedBox(
+                      height: Dimension.height20,
+                    ),
                     Bigtext(text: "Introduce")
                   ],
                 ),
@@ -67,14 +71,38 @@ class popular_food extends StatelessWidget {
       ),
       bottomNavigationBar: Container(
         height: 120,
-        padding: EdgeInsets.only(top: Dimension.height30,bottom: Dimension.height30,left: Dimension.width20,right: Dimension.width20),
+        padding: EdgeInsets.only(
+            top: Dimension.height30,
+            bottom: Dimension.height30,
+            left: Dimension.width20,
+            right: Dimension.width20),
         decoration: BoxDecoration(
-          color: Colors.grey.shade200,
-          borderRadius: BorderRadius.only(topLeft: Radius.circular(Dimension.radius20*2),topRight: Radius.circular(Dimension.radius20*2))
-        ),
+            color: Colors.grey.shade200,
+            borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(Dimension.radius20 * 2),
+                topRight: Radius.circular(Dimension.radius20 * 2))),
         child: Row(
           children: [
-
+            Container(
+              padding: EdgeInsets.symmetric(vertical: Dimension.height20,horizontal: Dimension.height20),
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(Dimension.radius20),
+                  color: Colors.white),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(
+                    Icons.remove,
+                    color: Colors.grey,
+                  ),
+                  Text("0",style: TextStyle(fontSize: Dimension.size16),),
+                  Icon(
+                    Icons.add,
+                    color: Colors.grey,
+                  )
+                ],
+              ),
+            )
           ],
         ),
       ),
