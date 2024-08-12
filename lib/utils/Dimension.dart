@@ -36,6 +36,9 @@ class Dimension{
   //popular_food
   static double popular_food_size = screenHeight/2.41;
 
+  //text font size
+  static double font26 = screenHeight/32.46;
+
   //new icon size
 
 }

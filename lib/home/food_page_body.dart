@@ -1,6 +1,7 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_food_delivery_app/utils/Dimension.dart';
+import 'package:flutter_food_delivery_app/widgets/app_column.dart';
 import 'package:flutter_food_delivery_app/widgets/bigText.dart';
 import 'package:flutter_food_delivery_app/widgets/icon_and_text.dart';
 import 'package:flutter_food_delivery_app/widgets/small_text.dart';
@@ -118,36 +119,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                         ),
                         child: Padding(
                           padding: EdgeInsets.only(left: Dimension.width10,right: Dimension.width10),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Bigtext(text: "Famous Vadapav of mumbai"),
-                              SizedBox(height: Dimension.height10,),
-                              small_text(text: "With Green Chutney"),
-                              SizedBox(height: Dimension.height10,),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: [
-                                  IconAndText(
-                                      icon: Icons.circle,
-                                      text: "Normal",
-                                      color: Colors.grey,
-                                      iconColor: Colors.yellow),
-                                  IconAndText(
-                                      icon: Icons.location_on,
-                                      text: "1.7km",
-                                      color: Colors.grey,
-                                      iconColor: Colors.blue),
-                                  IconAndText(
-                                      icon: Icons.access_time_rounded,
-                                      text: "32 min",
-                                      color: Colors.grey,
-                                      iconColor: Colors.grey),
-                                ],
-                              )
-                            ],
-                          ),
+                          child: AppColumn(text: "Masala Dosa",),
                         ),
                       ),
 
