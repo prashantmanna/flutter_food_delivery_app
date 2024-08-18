@@ -7,7 +7,6 @@ import 'icon_and_text.dart';
 
 class AppColumn extends StatelessWidget {
   final String text;
-
   const AppColumn({super.key, required this.text});
 
   @override
@@ -18,6 +17,9 @@ class AppColumn extends StatelessWidget {
         Bigtext(
           text: text,
           size: Dimension.font26,
+          font: const TextStyle(
+            fontFamily: 'Poppins'
+          ),
         ),
         SizedBox(
           height: Dimension.height10,
@@ -27,7 +29,7 @@ class AppColumn extends StatelessWidget {
             Wrap(
               children: List.generate(
                   5,
-                  (index) => Icon(
+                  (index) => const Icon(
                         Icons.star,
                         color: Colors.grey,
                         size: 15,
@@ -50,7 +52,7 @@ class AppColumn extends StatelessWidget {
         SizedBox(
           height: Dimension.height20,
         ),
-        Row(
+        const Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             IconAndText(

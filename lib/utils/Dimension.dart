@@ -38,6 +38,7 @@ class Dimension{
 
   //text font size
   static double font26 = screenHeight/32.46;
+  static double font18 = screenHeight/52.75;
 
   //new icon size
   static double containerHeight = screenHeight/7.1222;
