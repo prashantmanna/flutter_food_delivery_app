@@ -168,7 +168,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(Dimension.radius30),
                 color: index.isEven ? Color(0xff69c5df) : Color(0xff9294cc),
-                image: DecorationImage(
+                image: const DecorationImage(
                     fit: BoxFit.cover,
                     image: AssetImage("assets/images/masaladosa.jpg"))),
           ),
@@ -246,7 +246,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(Dimension.radius20),
                   color: Colors.white,
-                  boxShadow: [
+                  boxShadow: const [
                     BoxShadow(
                         color: Color(0xffe8e8e8),
                         blurRadius: 8.0,

@@ -12,6 +12,7 @@ class popular_food extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print("curr height ${MediaQuery.of(context).size.height}");
     return Scaffold(
       backgroundColor: Colors.white,
       body: Stack(
@@ -22,7 +23,7 @@ class popular_food extends StatelessWidget {
               child: Container(
                 width: double.maxFinite,
                 height: Dimension.popular_food_size,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     image: DecorationImage(
                         fit: BoxFit.cover,
                         image: AssetImage("assets/images/biryani.jpg"))),
@@ -31,7 +32,7 @@ class popular_food extends StatelessWidget {
             top: Dimension.height45,
             left: Dimension.width20,
             right: Dimension.width20,
-            child: Row(
+            child: const Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 AppIcon(icon: Icons.arrow_back_ios),
@@ -57,20 +58,21 @@ class popular_food extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    AppColumn(
-                      text: "Dum Paneer Biryani",
+                    const AppColumn(
+                      text: "Paneer Dum Biryani",
                     ),
                     SizedBox(
                       height: Dimension.height20,
                     ),
-                    Bigtext(text: "Introduce")
+                    Bigtext(text: "Introduce"),
+
                   ],
                 ),
               ))
         ],
       ),
       bottomNavigationBar: Container(
-        height: 120,
+        height: Dimension.containerHeight,
         padding: EdgeInsets.only(
             top: Dimension.height30,
             bottom: Dimension.height30,
@@ -82,6 +84,7 @@ class popular_food extends StatelessWidget {
                 topLeft: Radius.circular(Dimension.radius20 * 2),
                 topRight: Radius.circular(Dimension.radius20 * 2))),
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Container(
               padding: EdgeInsets.symmetric(vertical: Dimension.height20,horizontal: Dimension.height20),
@@ -91,15 +94,27 @@ class popular_food extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Icon(
+                  const Icon(
                     Icons.remove,
                     color: Colors.grey,
                   ),
                   Text("0",style: TextStyle(fontSize: Dimension.size16),),
-                  Icon(
+                  const Icon(
                     Icons.add,
                     color: Colors.grey,
                   )
+                ],
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.only(top: Dimension.height20,bottom: Dimension.height20,left: Dimension.width20,right: Dimension.width20),
+              decoration: BoxDecoration(
+                color: Colors.grey,
+                borderRadius: BorderRadius.only(topRight: Radius.circular(Dimension.radius20),topLeft: Radius.circular(Dimension.radius20),bottomRight: Radius.circular(Dimension.radius20),bottomLeft: Radius.circular(Dimension.radius20))
+              ),
+              child: Row(
+                children: [
+                  small_text(color: Colors.white,size: Dimension.size16,text: "\$10 | Add to Cart")
                 ],
               ),
             )
