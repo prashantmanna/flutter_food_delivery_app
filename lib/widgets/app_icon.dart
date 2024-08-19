@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_food_delivery_app/utils/Dimension.dart';
 class AppIcon extends StatelessWidget {
   final IconData icon;
   final Color bgColor;
