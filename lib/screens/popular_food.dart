@@ -74,23 +74,23 @@ class popular_food extends StatelessWidget {
                   const Expanded(
                     child: SingleChildScrollView(
                       child: expandable_text(
-                          text: "Panner Dum Biryani is very popular dish here."
+                          text: "Paneer Dum Biryani is very popular dish here."
                               "People often chooses this dish and very very delicious and tasty item in our food we offer"
                               "we find that people eat this dish very often"
                               "This paneer dum biryani is made with authentic recipe of our cuisine"
-                              "Panner Dum Biryani is very popular dish here."
+                              "Paneer Dum Biryani is very popular dish here."
                               "People often chooses this dish and very very delicious and tasty item in our food we offer"
                               "we find that people eat this dish very often"
                               "This paneer dum biryani is made with authentic recipe of our cuisine"
-                              "Panner Dum Biryani is very popular dish here."
+                              "Paneer Dum Biryani is very popular dish here."
                               "People often chooses this dish and very very delicious and tasty item in our food we offer"
                               "we find that people eat this dish very often"
                               "This paneer dum biryani is made with authentic recipe of our cuisine"
-                              "Panner Dum Biryani is very popular dish here."
+                              "Paneer Dum Biryani is very popular dish here."
                               "People often chooses this dish and very very delicious and tasty item in our food we offer"
                               "we find that people eat this dish very often"
                               "This paneer dum biryani is made with authentic recipe of our cuisine"
-                              "Panner Dum Biryani is very popular dish here."
+                              "Paneer Dum Biryani is very popular dish here."
                               "People often chooses this dish and very very delicious and tasty item in our food we offer"
                               "we find that people eat this dish very often"),
                     ),

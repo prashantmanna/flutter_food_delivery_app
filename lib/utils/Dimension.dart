@@ -42,4 +42,7 @@ class Dimension{
 
   //new icon size
   static double containerHeight = screenHeight/7.1222;
+
+  //toolbar height
+  static double toolbarHeight = screenHeight/10.81;
 }
