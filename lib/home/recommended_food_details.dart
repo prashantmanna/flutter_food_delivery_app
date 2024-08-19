@@ -3,12 +3,9 @@ import 'package:flutter_food_delivery_app/utils/Dimension.dart';
 import 'package:flutter_food_delivery_app/widgets/app_icon.dart';
 import 'package:flutter_food_delivery_app/widgets/bigText.dart';
 import 'package:flutter_food_delivery_app/widgets/expandableText.dart';
-
 import '../widgets/small_text.dart';
-
 class RecommendedFoodDetails extends StatelessWidget {
   const RecommendedFoodDetails({super.key});
-
   @override
   Widget build(BuildContext context) {
     print(MediaQuery.of(context).size.height);
@@ -127,7 +124,7 @@ class RecommendedFoodDetails extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 AppIcon(icon: Icons.remove,
-                bgColor: Colors.grey.shade400,
+                bgColor: Colors.redAccent,
                 iconSize: Dimension.size24,
                 itemColor: Colors.white,),
                 Bigtext(
@@ -135,7 +132,7 @@ class RecommendedFoodDetails extends StatelessWidget {
                     size: Dimension.font26,
                     text: "\$12.88 "+" X "+" O"),
                 AppIcon(icon: Icons.add,
-                bgColor: Colors.grey.shade400,
+                bgColor: Colors.redAccent,
                 iconSize: Dimension.size24,
                 itemColor: Colors.white,)
               ],
@@ -162,29 +159,8 @@ class RecommendedFoodDetails extends StatelessWidget {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(Dimension.radius20),
                       color: Colors.white),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      const Icon(
-                        Icons.remove,
-                        color: Colors.grey,
-                      ),
-                      SizedBox(
-                        width: Dimension.width10 / 2,
-                      ),
-                      Text(
-                        "0",
-                        style: TextStyle(fontSize: Dimension.size16),
-                      ),
-                      SizedBox(
-                        width: Dimension.width10 / 2,
-                      ),
-                      const Icon(
-                        Icons.add,
-                        color: Colors.grey,
-                      )
-                    ],
-                  ),
+                  child: Icon(Icons.favorite,
+                  color: Colors.redAccent,),
                 ),
                 Container(
                   padding: EdgeInsets.only(
