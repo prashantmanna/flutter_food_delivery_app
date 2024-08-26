@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_food_delivery_app/home/recommended_food_details.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
-
-void main() {
+import 'helper/dependency.dart'as dep;
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await dep.init();
   runApp(const MyApp());
 }
 
